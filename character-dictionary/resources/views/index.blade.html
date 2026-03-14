@@ -1,0 +1,38 @@
+<h1>Character Dictionary</h1>
+
+<a href="/characters/create">Create Character</a>
+
+<table border="1">
+<tr>
+<th>Name</th>
+<th>Ability</th>
+<th>Group</th>
+<th>Actions</th>
+</tr>
+
+@foreach($characters as $c)
+
+<tr>
+<td>{{ $c->name }}</td>
+<td>{{ $c->ability }}</td>
+<td>{{ $c->group }}</td>
+
+<td>
+
+<a href="/characters/{{ $c->id }}/edit">Edit</a>
+
+<form action="/characters/{{ $c->id }}" method="POST">
+@csrf
+@method('DELETE')
+
+<button type="submit">Delete</button>
+
+</form>
+
+</td>
+
+</tr>
+
+@endforeach
+
+</table>
