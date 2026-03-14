@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Character Dictionary</title>
+<link rel="stylesheet" href="charac.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Character Dictionary</h1>
+
+<div class="header">
+<h2>Characters</h2>
+<button id="createBtn">+ Create character</button>
+</div>
+
+<div id="characterList"></div>
+
+</div>
+
+<!-- CREATE / EDIT MODAL -->
+<div id="modal" class="modal">
+
+<div class="modal-content">
+
+<h3 id="modalTitle">Create Character</h3>
+
+<input id="name" placeholder="Character Name">
+<input id="power" placeholder="Ability">
+<input id="group" placeholder="Group">
+
+<div class="modal-buttons">
+<button id="saveBtn">Save</button>
+<button id="cancelBtn">Cancel</button>
+</div>
+
+</div>
+</div>
+
+<script src="charac.js"></script>
+
+</body>
+</html>
